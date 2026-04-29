@@ -1,0 +1,31 @@
+#include <iostream>
+using namespace std;
+
+class BankAccount {
+private:
+    int balance;   // hidden data
+
+public:
+    // Constructor to initialize balance
+    BankAccount() {
+        balance = 0;
+    }
+
+    // Setter function
+    void deposit(int amount) {
+        balance += amount;
+    }
+
+    // Getter function
+    void display() {
+        cout << "Balance: " << balance << endl;
+    }
+};
+
+int main() {
+    BankAccount acc;
+    acc.deposit(1000);   // accessing via function
+    acc.display();
+
+    return 0;
+}
